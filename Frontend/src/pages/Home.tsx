@@ -74,7 +74,7 @@ function Home() {
   return (
     <div className="max-w-5xl mx-auto mt-10 px-4">
       <h1 className="text-3xl font-bold mb-8 text-center">
-        Repositorios del Equipo
+        Team members repositories
       </h1>
 
       {/* FILTROS */}
