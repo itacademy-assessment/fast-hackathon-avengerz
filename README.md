@@ -1,62 +1,88 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/HgrjD5Sh)
-# Briefing: Fast-Hackathon - Mob Page de Repositorios GitHub
+# 🚀 GitHub Repositories Mob Page - Fast Hackathon
 
-¡Bienvenidos a la Fast-Hackathon! En este desafío, cada equipo desarrollará una **"mob page"** que interactúe con GitHub, mostrando los repositorios de sus miembros y ofreciendo funcionalidades adicionales.
+![Project Preview](public/images/preview.png) <!-- afergir img -->
 
-## 🎯 Objetivo General
+## 📌 Overview
+A responsive web application that connects to GitHub's API to display and manage repositories for team members, built during a 3-hour hackathon.
 
-Crear una **aplicación web responsive (mob page)** que se conecte a GitHub para visualizar y gestionar los repositorios de los integrantes del equipo.
+## ✨ Features
+### 🏠 Dashboard
+- List of all team repositories
+- Filters by:
+  - Language
+  - Repository name
+  - Owner
 
-## ✨ Funcionalidades Requeridas
+### 👤 Profile
+- GitHub OAuth login
+- Personalized repository view
+- Local customization:
+  - Custom tags
+  - Descriptions (stored locally)
 
-* **Página Principal (Home/Dashboard):**
-    * Muestra una lista de los **repositorios de todos los miembros del equipo**.
-    * Implementa **filtros** para los repositorios (por ejemplo, por lenguaje, por nombre del repositorio, por propietario).
+### 👥 About Us
+- Team member profiles
 
-* **Autenticación y Página de Perfil (Profile Page):**
-    * Incorpora un sistema de **autenticación** que permita al usuario iniciar sesión con su cuenta de GitHub.
-    * Una vez autenticado, la página de perfil debe **mostrar solo los repositorios que pertenecen al usuario** que ha iniciado sesión.
-    * Permite la **edición de ciertas características de los repositorios** (por ejemplo, añadir etiquetas personalizadas, una breve descripción). Estos cambios *no tienen por qué sincronizarse con GitHub*; pueden ser datos almacenados localmente en la aplicación.
+## 🛠️ Tech Stack
+| Technology | Purpose |
+|------------|---------|
+| React | Frontend framework |
+| GitHub API | Repository data |
+| OAuth | Authentication |
+| Tailwind | Styling |
+| GitHub Pages | Deployment |
 
-* **Página "About":**
-    * Presenta una **pequeña descripción de cada miembro del equipo**.
+## 🏗️ Folder Structure
+```bash
+fast-hackathon-avengerz/
 
-## 🛠️ Consideraciones Técnicas
+├── public/
+│   ├── images/          
+│   └── index.html      
+├── src/
+│   ├── assets/     
+│   ├── pages/           
+│   ├── App.css        
+│   ├── App.tsx         
+│   ├── index.css           
+│   └── main.tsx        
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
+```
 
-* **Integración con GitHub:** La aplicación deberá consumir la **API pública de GitHub** para obtener la información de los repositorios. Para la autenticación, investigad la [OAuth de GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps).
-* **Responsive Design:** La "mob page" debe estar **optimizada para dispositivos móviles** y ser completamente responsive.
-* **Tecnologías Permitidas:** Se puede elegir entre las siguientes tecnologías frontend:
-    * **Vanilla JS/HTML/CSS**
-    * **React**
-    * **Angular**
+## 🚀 Installation
 
-## ⏱️ Estructura y Dinámica de la Hackathon
+Clone the repository
+```bash
+git clone https://github.com/itacademy-assessment/fast-hackathon-avengerz.git
+cd fast-hackathon-avengerz
+```
 
-* **Equipos:** Los equipos estarán compuestos por **3 o 4 personas**.
-* **Duración:** Esta es una **fast-hackathon** con una duración total de **3 horas**.
-* **Objetivo:**
-    1.  **Desarrollo y Despliegue:** Construir y **desplegar la aplicación** funcional. Se pueden usar plataformas como Netlify, Vercel o GitHub Pages para un despliegue rápido.
-    2.  **Preparación de la Presentación:** Preparar una **pequeña presentación de 3 minutos** para mostrar el resultado final.
+Install dependencies
+```bash
+npm install
+```
 
-## 🌟 Bonus
+<!-- Set up environment variables
+```bash
+echo "REACT_APP_GITHUB_CLIENT_ID=your_id" > .env
+echo "REACT_APP_GITHUB_CLIENT_SECRET=your_secret" >> .env
+``` -->
 
-* **Testing:** Implementar pruebas unitarias o de integración para las funcionalidades clave.
-* **GitHub Actions:** Configurar un flujo de CI/CD básico para la aplicación.
+Run the application
 
-## 🏆 Criterios de Valoración
-* **Funcionalidad:** Que las funcionalidades requeridas estén implementadas y sean operativas.
-* **Diseño y Usabilidad:** La interfaz de usuario, la experiencia de usuario y el diseño responsive.
-* **Calidad del Código:** Limpieza, organización y buenas prácticas en el código.
-* **Accesibilidad:** Que el sitio sea accesible para todos los usuarios, siguiendo principios básicos de accesibilidad web.
-* **Presentación:** Claridad y concisión al mostrar su trabajo en los 3 minutos asignados.
+```bash
+npm start
+```
 
-## 🎬 DEMO
 
-Al finalizar la hackathon, **cada equipo tendrá 3 minutos para presentar su aplicación** ante el resto de participantes y mentores. La demo debe incluir:
+## 👥 Team Members
 
-1. **Breve explicación funcional** de la app: ¿Qué hace? ¿Cómo lo hace? ¿Qué funcionalidades implementaron?
-2. **Demostración en vivo** de la aplicación ya desplegada.
+- [Carlos](https://github.com/clos266) - Frontend Developer
+- [Edgar](https://github.com/edgarpomar) - Frontend Developer
+- [Enric](https://github.com/justmove1987) - Frontend Developer
+- [Marc](https://github.com/mstne03) - Frontend Developer
+- [Anna](https://github.com/annahico) - Frontend Developer
 
-🔚 Una vez finalizadas todas las presentaciones, **todos los participantes y mentores votarán** por la mejor aplicación. **No se permite votar por el propio equipo.** La aplicación más votada será reconocida como la ganadora de esta Fast-Hackathon.
-
-💡 Consejo: No intentéis mostrar todo. Elegid **los puntos más fuertes** y destacad lo que habéis aprendido y conseguido en tan poco tiempo.
