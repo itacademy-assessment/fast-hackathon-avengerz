@@ -29,27 +29,28 @@ A responsive web application that connects to GitHub's API to display and manage
 | React | Frontend framework |
 | GitHub API | Repository data |
 | OAuth | Authentication |
-| CSS Modules | Styling |
+| Tailwind | Styling |
 | GitHub Pages | Deployment |
 
 ## 🏗️ Folder Structure
 ```bash
 fast-hackathon-avengerz/
+
 ├── public/
 │   ├── images/          
 │   └── index.html      
 ├── src/
-│   ├── components/      
+│   ├── assets/     
 │   ├── pages/           
-│   ├── services/        
-│   ├── styles/          
-│   ├── App.js           
-│   └── index.js        
+│   ├── App.css        
+│   ├── App.tsx         
+│   ├── index.css           
+│   └── main.tsx        
 ├── .gitignore
+├── index.html
 ├── package.json
 └── README.md
 ```
-
 
 ## 🚀 Installation
 
@@ -64,11 +65,11 @@ Install dependencies
 npm install
 ```
 
-Set up environment variables
+<!-- Set up environment variables
 ```bash
 echo "REACT_APP_GITHUB_CLIENT_ID=your_id" > .env
 echo "REACT_APP_GITHUB_CLIENT_SECRET=your_secret" >> .env
-```
+``` -->
 
 Run the application
 
