@@ -3,7 +3,15 @@ import axios from "axios";
 
 function SearchUsers() {
   const [inputUser, setInputUser] = useState("");
-  const [repos, setRepos] = useState([]);
+  type Repo = {
+    id: number;
+    name: string;
+    html_url: string;
+    description: string | null;
+    language: string | null;
+  };
+
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -18,7 +26,7 @@ function SearchUsers() {
         `https://api.github.com/users/${inputUser}/repos`
       );
       setRepos(res.data);
-    } catch (err) {
+    } catch {
       setError("No se pudo obtener repositorios. ¿Usuario válido?");
     } finally {
       setLoading(false);

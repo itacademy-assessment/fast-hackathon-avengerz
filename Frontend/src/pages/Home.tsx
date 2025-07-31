@@ -9,8 +9,17 @@ const teamUsernames = [
   "justmove1987",
 ];
 
+type Repo = {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string;
+  language: string | null;
+  ownerUsername: string;
+};
+
 function Home() {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Estados para filtros
@@ -27,8 +36,8 @@ function Home() {
           const res = await axios.get(
             `https://api.github.com/users/${username}/repos`
           );
-          const userRepos = res.data.map((repo) => ({
-            ...repo,
+          const userRepos = res.data.map((repo: unknown) => ({
+            ...(repo as object),
             ownerUsername: username,
           }));
           allRepos.push(...userRepos);
@@ -94,7 +103,7 @@ function Home() {
         >
           <option value="">Todos los lenguajes</option>
           {languages.map((lang) => (
-            <option key={lang} value={lang}>
+            <option key={lang ?? ""} value={lang ?? ""}>
               {lang}
             </option>
           ))}
