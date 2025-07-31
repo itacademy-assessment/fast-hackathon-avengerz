@@ -81,7 +81,7 @@ function Home() {
       <div className="mb-6 flex flex-col md:flex-row md:items-center md:space-x-4 gap-4">
         <input
           type="text"
-          placeholder="Filtrar por nombre"
+          placeholder="Filter by name"
           value={filterName}
           onChange={(e) => setFilterName(e.target.value)}
           className="flex-1 px-3 py-2 border rounded"
@@ -92,7 +92,7 @@ function Home() {
           onChange={(e) => setFilterLanguage(e.target.value)}
           className="px-3 py-2 border rounded"
         >
-          <option value="">Todos los lenguajes</option>
+          <option value="">All Languages</option>
           {languages.map((lang) => (
             <option key={lang} value={lang}>
               {lang}
@@ -105,7 +105,7 @@ function Home() {
           onChange={(e) => setFilterOwner(e.target.value)}
           className="px-3 py-2 border rounded"
         >
-          <option value="">Todos los propietarios</option>
+          <option value="">All Owners</option>
           {owners.map((owner) => (
             <option key={owner} value={owner}>
               {owner}
@@ -116,10 +116,10 @@ function Home() {
 
       {/* LISTA DE REPOS */}
       {loading ? (
-        <p className="text-center text-gray-500">Cargando repositorios...</p>
+        <p className="text-center text-gray-500">Loading repos...</p>
       ) : filteredRepos.length === 0 ? (
         <p className="text-center text-gray-500">
-          No se encontraron repositorios.
+          No repositories found.
         </p>
       ) : (
         <div className="grid gap-6">
@@ -138,7 +138,7 @@ function Home() {
               </a>
               <p className="text-sm text-gray-700 mb-1">{repo.description}</p>
               <div className="text-xs text-gray-500">
-                Lenguaje: {repo.language || "No especificado"} | Propietario:{" "}
+                Language: {repo.language || "Not specified"} | Owner:{" "}
                 {repo.ownerUsername}
               </div>
             </div>

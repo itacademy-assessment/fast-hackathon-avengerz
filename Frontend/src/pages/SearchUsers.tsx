@@ -19,7 +19,7 @@ function SearchUsers() {
       );
       setRepos(res.data);
     } catch (err) {
-      setError("No se pudo obtener repositorios. ¿Usuario válido?");
+      setError("Could not fetch repositories. Is this a valid user?");
     } finally {
       setLoading(false);
     }
@@ -28,13 +28,13 @@ function SearchUsers() {
   return (
     <div className="max-w-2xl mx-auto mt-10 px-4">
       <h1 className="text-2xl font-bold mb-4 text-center">
-        Buscar Repositorios por Usuario
+        Search Repositories by User
       </h1>
 
       <div className="flex gap-2 mb-4">
         <input
           type="text"
-          placeholder="Usuario de GitHub"
+          placeholder="GitHub username"
           value={inputUser}
           onChange={(e) => setInputUser(e.target.value)}
           className="flex-grow border px-3 py-2 rounded"
@@ -43,12 +43,12 @@ function SearchUsers() {
           onClick={fetchRepos}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
-          Buscar
+          Search
         </button>
       </div>
 
       {loading && (
-        <p className="text-center text-gray-500">Cargando repos...</p>
+        <p className="text-center text-gray-500">Loading repositories...</p>
       )}
       {error && <p className="text-center text-red-500">{error}</p>}
 
@@ -66,7 +66,7 @@ function SearchUsers() {
               </a>
               <p className="text-sm text-gray-700">{repo.description}</p>
               <p className="text-xs text-gray-500">
-                Lenguaje: {repo.language || "N/A"}
+                Language: {repo.language || "N/A"}
               </p>
             </div>
           ))}

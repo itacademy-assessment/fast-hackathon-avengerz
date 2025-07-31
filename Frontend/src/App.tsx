@@ -14,7 +14,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/about">About</Link>
-          <Link to="/search">Buscar Usuarios</Link> {/* NUEVO */}
+          <Link to="/search">Search Users</Link> {/* NUEVO */}
         </div>
         <Link to="/auth">Login</Link>
       </nav>
